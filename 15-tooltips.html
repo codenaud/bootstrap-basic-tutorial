@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Bootstrap 5 Crash Course Tutorial #15 - Tooltips</title>
+
+    <style>
+        section {
+            padding: 60px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Tutorial de Youtube #15: https://youtu.be/WTrW-1JsDYE?si=1vHnVr_hPH5RoddB -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-xxl">
+            <a href="#intro" class="navbar-brand">
+                <span class="fw-bold text-secondary"><i class="bi bi-bootstrap-fill"></i>
+                    Bootstrap Basics
+                </span>
+            </a>
+            <!-- toggle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" arial-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar  links-->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#topics">About </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Get in Touch</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item ms-2 d-none d-md-inline">
+                        <a class="btn btn-secondary" href="#pricing">Buy now</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- main image & intro text -->
+    <section id="intro">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <h1>
+                        <div class="display-2">Black-Belt</div>
+                        <div class="display-5">Your Coding Skills</div>
+                    </h1>
+                    <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#pricing" class="btn btn-secondary btn-lg">Buy now</a>
+                </div>
+                <div class="col-md-5 text-center d-none d-md-block">
+                    <!-- d-none : display none
+                    d-md-block: display md block -->
+
+                    <!-- tooltip [Remenber add the js code to the end of the document]-->
+                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip bootstrap">
+                        <img class="img-fluid" src="https://picsum.photos/600/600" alt="catty-image">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- pricing plans -->
+    <section id="pricing" class="bg-light mt-5">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Pricing Plans
+                </h2>
+                <p class="lead text-muted">Choose a pricing plan to suit you.</p>
+            </div>
+
+            <div class="row my-5 align-items-center justify-content-center g-0">
+                <!-- cards -->
+                <div class="col-8 col-lg-4 col-xl-3">
+                    <div class="card border-0">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Starter Edition</h4>
+                            <p class="lead card-subtitle">eBook download only</p>
+                            <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aliquam reiciendis
+                                deserunt fugiat magni totam neque!</p>
+                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards -->
+                <div class="col-9 col-lg-4 ">
+                    <div class="card border-primary border-2">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-header text-center text-primary">Most Popular</div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title">Complete Edition</h4>
+                            <p class="lead card-subtitle">eBook download & all updates</p>
+                            <p class="display-5 my-4 text-primary fw-bold">$18.99</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aliquam reiciendis
+                                deserunt fugiat magni totam neque!</p>
+                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards -->
+                <div class="col-8 col-lg-4 col-xl-3">
+                    <div class="card border-0">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Ultimate Edition</h4>
+                            <p class="lead card-subtitle">Download, updates & extras</p>
+                            <p class="display-5 my-4 text-primary fw-bold">$24.99</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aliquam reiciendis
+                                deserunt fugiat magni totam neque!</p>
+                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- topies at a glance -->
+    <section id="topics">
+        <div class="container-md">
+            <div class="text-center">
+                <h2>Inside the book...</h2>
+                <p class="lead text-muted">A quick glance at the topics you'll learn</p>
+            </div>
+            <div class="row my-5 g-5 justify-content-around align-items-center">
+                <div class="col-6 col-lg-4">
+                    <img class="img-fluid" src="https://picsum.photos/600/600" alt="Random image">
+                </div>
+                <div class="col-lg-6">
+                    <!-- accordion -->
+                    <div class="accordion" id="chapters">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#chapterOne" aria-expanded="true" aria-controls="chapteOne">
+                                    Chapter 1 - Your First Web Page
+                                </button>
+                            </h2>
+                            <div id="chapteOne" class="accordion-collapse collapse show" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the
+                                    collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#chapteTwo" aria-expanded="false" aria-controls="chapteTwo">
+                                    Chapter 2 - Mastering css
+                                </button>
+                            </h2>
+                            <div id="chapteTwo" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until
+                                    the collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#chapteThree" aria-expanded="false" aria-controls="chapteThree">
+                                    Chapter 3 - The power of JavaScript
+                                </button>
+                            </h2>
+                            <div id="chapteThree" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the
+                                    collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#chapteFour" aria-expanded="false" aria-controls="chapteFour">
+                                    Chapter 4 - Storing Data (Firebase Database)
+                                </button>
+                            </h2>
+                            <div id="chapteFour" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the
+                                    collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#chapteFive" aria-expanded="false" aria-controls="chapteFive">
+                                    Chapter 5 - User Authentification
+                                </button>
+                            </h2>
+                            <div id="chapteFive" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the
+                                    collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- reviews list -->
+    <section id="reviews" class="bg-light">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2><i class="bi bi-stars"></i>Book Reviews</h2>
+                <p class="lead">What my students have said about the book...</p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-8">
+                    <div class="list-group">
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">A must buy for every aspiring web dev</h5>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dignissimos
+                                eveniet libero debitis facilis repellendus dolor optio officiis in consequuntur!</p>
+                            <small>Review by Mario</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">A must buy for every aspiring web dev</h5>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dignissimos
+                                eveniet libero debitis facilis repellendus dolor optio officiis in consequuntur!</p>
+                            <small>Review by Jhonny</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">A must buy for every aspiring web dev</h5>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dignissimos
+                                eveniet libero debitis facilis repellendus dolor optio officiis in consequuntur!</p>
+                            <small>Review by Stefania</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">A must buy for every aspiring web dev</h5>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dignissimos
+                                eveniet libero debitis facilis repellendus dolor optio officiis in consequuntur!</p>
+                            <small>Review by Jordi</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <div class="pb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h5 class="mb-1">A must buy for every aspiring web dev</h5>
+                            <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dignissimos
+                                eveniet libero debitis facilis repellendus dolor optio officiis in consequuntur!</p>
+                            <small>Review by Nuria</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact form -->
+    <!-- form-control, form-label, form-select, input-group, input-group-text -->
+
+    <section id="contact">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Get in Touch</h2>
+                <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
+            </div>
+
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form action="">
+                        <label for="email" class="form-label mt-2">Email adress:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope-fill"></i>
+                            </span>
+                            <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+                            <!-- tooltip [Remenber add the js code to the end of the document]-->
+                            <span class="input-group-text">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-title="Enter an email adress we can reply to.">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
+                        </div>
+
+
+                        <label for="name" class="form-label mt-2">Name:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+                            <input type="text" class="form-control" id="nam" placeholder="e.g. Mario">
+                            <!-- tooltip [Remenber add the js code to the end of the document]-->
+                            <span class="input-group-text">
+                                <span data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-title="Pretty self explanatory really...">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
+                        </div>
+
+
+                        <label for="subject" class="form-label mt-2">What is your question about?</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-right-dots-fill"></i>
+                            </span>
+                            <select class="form-select" id="subject">
+                                <option value="pricing" selected>Pricing query</option>
+                                <option value="content" selected>Content query</option>
+                                <option value="other" selected>Other query</option>
+                            </select>
+                        </div>
+
+
+
+                        <div class="form-floating mt-5 mb-4">
+                            <textarea name="" id="query" class="form-control" style="height:140px;"></textarea>
+                            <label for="query">Your query...</label>
+                        </div>
+
+                        <div class="mb-4 text-center">
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script>
+        // Tooltip Code
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+
+</html>
