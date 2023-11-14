@@ -1,3 +1,19 @@
+// custom styles
+/* Nav Tabs*/
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-bottom: 2px solid red !important;
+}
+.nav-link {
+  &:hover,
+  &:focus {
+    // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+
+    border-color: transparent !important;
+  }
+}
 // custom variables
 $primary: #c29938;
 $light: #fbf5e5;
